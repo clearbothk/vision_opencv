@@ -1,6 +1,6 @@
 <package format="2">
   <name>cv_bridge</name>
-  <version>3.0.7</version>
+  <version>3.0.8</version>
   <description>
     This contains CvBridge, which converts between ROS2
     Image messages and OpenCV images.
@@ -22,11 +22,9 @@
   <build_depend>libboost-dev</build_depend>
   <build_depend>libboost-python-dev</build_depend>
 
-  <depend>libopencv-dev</depend>
   <depend>python3-numpy</depend>
   <depend>rcpputils</depend>
   <depend>sensor_msgs</depend>
-  <depend>python3-opencv</depend>
 
   <exec_depend>ament_index_python</exec_depend>
   <exec_depend>libboost-python</exec_depend>

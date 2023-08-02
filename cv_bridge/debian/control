@@ -1,0 +1,12 @@
+Source: ros-foxy-clearbot-cv-bridge
+Section: misc
+Priority: optional
+Maintainer: Kenji Brameld <kenjibrameld@gmail.com>
+Build-Depends: debhelper (>= 9.0.0), libboost-dev, libboost-python-dev, python3-numpy, ros-foxy-ament-cmake-gtest <!nocheck>, ros-foxy-ament-cmake-pytest <!nocheck>, ros-foxy-ament-cmake-ros, ros-foxy-ament-lint-auto <!nocheck>, ros-foxy-ament-lint-common <!nocheck>, ros-foxy-python-cmake-module, ros-foxy-rcpputils, ros-foxy-sensor-msgs
+Homepage: http://www.ros.org/wiki/cv_bridge
+Standards-Version: 3.9.2
+
+Package: ros-foxy-clearbot-cv-bridge
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, libboost-python1.71.0, python3-numpy, ros-foxy-ament-index-python, ros-foxy-rcpputils, ros-foxy-sensor-msgs
+Description: This contains CvBridge, which converts between ROS2 Image messages and OpenCV images.
