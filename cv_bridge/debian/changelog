@@ -1,3 +1,9 @@
+ros-foxy-clearbot-cv-bridge (3.0.8-0focal) UNRELEASED; urgency=medium
+
+  * Keep only cv-brodge, remove the dependencies for libopencv_4.2
+
+ -- clearbot <clearbot@dev>  Fri, 18 Aug 2023 17:45:58 +0800
+
 ros-foxy-clearbot-cv-bridge (3.0.7-0focal) focal; urgency=high
 
   * Add message to print out Boost_VERSION_STRING, and apply with CMP0093
