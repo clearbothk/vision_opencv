@@ -1,3 +1,9 @@
+ros-foxy-clearbot-cv-bridge (3.0.9-0focal) focal; urgency=medium
+
+  * modify dh_shlibdeps in debian rules to make the package building successful
+
+ -- clearbot <clearbot@dev>  Mon, 21 Aug 2023 17:19:45 +0800
+
 ros-foxy-clearbot-cv-bridge (3.0.8-0focal) UNRELEASED; urgency=medium
 
   * Keep only cv-brodge, remove the dependencies for libopencv_4.2
