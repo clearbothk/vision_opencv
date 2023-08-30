@@ -1,0 +1,7 @@
+.debhelper/
+ros-*-rtps-monitior/
+
+*.log
+*.debhelper
+*.*vars
+
