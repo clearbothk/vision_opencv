@@ -23,7 +23,7 @@ jobs:
       - name: Install dependencies
         run: |
           sudo apt -y update
-          sudo apt install -y dh-make fakeroot opencv-libs opencv-main opencv-python opencv-dev
+          sudo apt install -y dh-make fakeroot opencv-libs opencv-main opencv-python opencv-dev libboost-all-dev
         working-directory: ./cv_bridge
       - name: fakeroot
         run: fakeroot debian/rules binary
