@@ -19,19 +19,20 @@ jobs:
           wget -qO - https://aptserver.clearbot.dev/pubkey | sudo apt-key add -
           echo "machine https://aptserver.clearbot.dev\nlogin $APTSERVER_USER\npassword $APTSERVER_PASSWORD" >> /etc/apt/auth.conf.d/clearbot.conf
           sudo add-apt-repository 'deb https://aptserver.clearbot.dev focal main'
-
-      - run: |
+        working-directory: ./cv_bridge
+      - name: Install dependencies
+        run: |
           sudo apt -y update
           sudo apt install -y dh-make fakeroot opencv-libs opencv-main opencv-python opencv-dev
-
+        working-directory: ./cv_bridge
       - name: fakeroot
         run: fakeroot debian/rules binary
-
+        working-directory: ./cv_bridge
       - name: Debian file
         id: deb-file-name
         run: |
           cd .. && echo DEB_FILE="$(pwd)/$(find . -name "ros-foxy-clearbot-cv-bridge*.deb" | sed -r 's/^.{2}//')" >> "$GITHUB_OUTPUT"
-
+        working-directory: ./cv_bridge
       - name: Upload to aptserver
         env:
           APTSERVER_USER: ${{ secrets.APTSERVER_USER }}
