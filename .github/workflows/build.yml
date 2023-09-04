@@ -12,13 +12,9 @@ on:
 jobs:
   build-debian:
     runs-on: ARM64
-    container: ros:foxy
+    container: asia-docker.pkg.dev/clearbot-360312/clearbot-public/ros-foxy-cuda:latest
     steps:
       - uses: actions/checkout@v3
-      - uses: Jimver/cuda-toolkit@v0.2.11
-        id: cuda-toolkit
-        with:
-          cuda: "11.4.1"
       - name: Setup apt repo
         env:
           APTSERVER_USER: ${{ secrets.APTSERVER_USER }}
