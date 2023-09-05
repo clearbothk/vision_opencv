@@ -1,3 +1,9 @@
+ros-foxy-clearbot-cv-bridge (3.0.10-0focal) focal; urgency=medium
+
+  * use cuda enabled image in the github action
+
+ -- clearbot <clearbot@clearbotlaptop0>  Tue, 05 Sep 2023 12:22:49 +0800
+
 ros-foxy-clearbot-cv-bridge (3.0.9-0focal) focal; urgency=medium
 
   * modify dh_shlibdeps in debian rules to make the package building successful
